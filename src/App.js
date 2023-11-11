@@ -43,8 +43,9 @@
       <div>
         {events.map((event) => (
           <div key={event.slug}>
-            <h2>{event.title_fr}</h2>
-            <p>{event.category_fr}</p>
+            <p>{event.title_fr}</p>
+            <p>{event.uid}</p>
+            <img src={event.image} alt='bug img' />
           </div>
         ))}
       </div>

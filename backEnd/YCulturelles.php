@@ -21,5 +21,5 @@ header("Content-Type: application/json; charset=UTF-8");
 $data = file_get_contents('https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/evenements-publics-openagenda/records?limit=20&refine=keywords_fr%3A%22concert%22'); //API temporaire ! event
 $data = json_decode($data, true);
 
-echo json_encode($data);
+echo json_encode($data['results']);
 ?>
