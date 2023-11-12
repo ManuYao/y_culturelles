@@ -28,7 +28,9 @@ export default function Data() {
   return dataEvent; 
 } 
   {/*
+  
   A corriger plus tard Affichage de l'état actuelle du chargemnt de la data ! 
+  
   // Information État API
   if (loading) {
     return <div>Chargement en cours...</div>;
