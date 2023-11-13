@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import Data from '../components/Data'
+import {FilterData ,FiltreDate} from '../components/FiltreData'
 
 export default class HomePage extends Component {
   render() {
     return (
       <div>
-        <Data />
+        <FiltreDate />
       </div>
     )
   }
