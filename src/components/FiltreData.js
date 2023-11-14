@@ -1,9 +1,10 @@
 import React, {useState} from "react";
 import Data from "./Data";
+import "../Styles/Card.css"
 
 export function FilterData () {
     const dataEvent = Data();
-    console.log(dataEvent);
+    //console.log(dataEvent);
 
     // Vérifie si dataEvent est un tableau avant d'appliquer filter
     const festivalsAndMusic = Array.isArray(dataEvent) ? dataEvent.filter((event_fetiv_music) =>
@@ -21,14 +22,16 @@ export function FilterData () {
     return (
         <div>
             <div key="festivalsAndMusic">
+              <div className="titel_card">
                 <h2>Festivals et Musique</h2>
+              </div>
                 {festivalsAndMusic.map((event_fm) => (
-                    <div key={event_fm.slug}>
+                    <div key={event_fm.slug} className="card">
+                        <img src={event_fm.image} alt='img_api_error' className="img_card"/>
                         <p>Titre :{event_fm.title_fr}</p>
                         <p>Condition :{event_fm.conditions_fr}</p>
                         <p>Lieu :{event_fm.location_name}</p>
                         <p>Date :{event_fm.daterange_fr}</p>
-                        <img src={event_fm.image} alt='img_api_error' />
                     </div>
                 ))}
             </div>
@@ -36,12 +39,12 @@ export function FilterData () {
             <div key="theatreAndShow">
                 <h2>Théâtre et Spectacle</h2>
                 {theatreAndShow.map((envent_ts) => (
-                    <div key={envent_ts.slug}>
+                    <div key={envent_ts.slug} className="card">
+                        <img src={envent_ts.image} alt='img_api_error'className="img_card" />
                         <p>Titre :{envent_ts.title_fr}</p>
                         <p>Condition :{envent_ts.conditions_fr}</p>
                         <p>Lieu :{envent_ts.location_name}</p>
                         <p>Date :{envent_ts.daterange_fr}</p>
-                        <img src={envent_ts.image} alt='img_api_error' />
                     </div>
                 ))}
             </div>
@@ -49,12 +52,12 @@ export function FilterData () {
             <div key="cinemaAndMovie">
                 <h2>Art et Exposition</h2>
                 {cinemaAndMovie.map((event_cm) => (
-                    <div key={event_cm.slug}>
+                    <div key={event_cm.slug} className="card">
+                        <img src={event_cm.image} alt='img_api_error' className="img_card"/>
                         <p>Titre :{event_cm.title_fr}</p>
                         <p>Condition :{event_cm.conditions_fr}</p>
                         <p>Lieu :{event_cm.location_name}</p>
                         <p>Date :{event_cm.daterange_fr}</p>
-                        <img src={event_cm.image} alt='img_api_error' />
                     </div>
                 ))}
             </div>
@@ -67,10 +70,11 @@ export function FilterData () {
  * Fr Fonction permetant d'afficher un filtre par date 
  * En ...
  */
-export function FiltreDate() {
+export function FilterDate() {
     const dataEvent = Data();
     const [filterByDate, setFilterByDate] = useState(false);
   
+    //Clic Event
     const handleCheckboxChange = () => {
       const newFilterState = !filterByDate;
       console.log('Nouvel état de filterByDate :', newFilterState);
@@ -83,7 +87,7 @@ export function FiltreDate() {
         : dataEvent
       : [];
   
-    console.log('Événements filtrés :', filteredEvents);
+   // console.log('Événements filtrés :', filteredEvents);
   
     return (
       <div>
@@ -97,12 +101,12 @@ export function FiltreDate() {
         </label>
   
         {filteredEvents.map((event) => (
-          <div key={event.slug}>
+          <div key={event.slug} className="card">
+            <img src={event.image} alt='img_api_error' className="img_card"/>
             <p>Titre : {event.title_fr}</p>
             <p>Condition : {event.conditions_fr}</p>
             <p>Lieu : {event.location_name}</p>
             <p>Date : {event.daterange_fr}</p>
-            <img src={event.image} alt='img_api_error' />
           </div>
         ))}
       </div>
