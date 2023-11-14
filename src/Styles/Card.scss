@@ -1,0 +1,28 @@
+//Card
+.title_card{
+    h2{
+        display: flex;
+        align-items: center;
+        background-color: #F5F5F5;
+        margin: auto;
+        margin-bottom: 24px;
+        padding-left: 24px;
+        height: 64px;
+        font-size: 16px;
+    }
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    .img_card{
+        width: 72vw;
+        height: 98vw;
+        margin-left: 24px;
+    }
+    p{
+
+    }
+}
+

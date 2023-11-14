@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import Data from "./Data";
-import "../Styles/Card.css"
+import "../Styles/Card.scss"
 
 export function FilterData () {
     const dataEvent = Data();
@@ -21,8 +21,8 @@ export function FilterData () {
 
     return (
         <div>
-            <div key="festivalsAndMusic">
-              <div className="titel_card">
+            <div key="festivalsAndMusic" >
+              <div className="title_card">
                 <h2>Festivals et Musique</h2>
               </div>
                 {festivalsAndMusic.map((event_fm) => (
@@ -37,7 +37,9 @@ export function FilterData () {
             </div>
 
             <div key="theatreAndShow">
+            <div className="title_card">
                 <h2>Théâtre et Spectacle</h2>
+            </div>
                 {theatreAndShow.map((envent_ts) => (
                     <div key={envent_ts.slug} className="card">
                         <img src={envent_ts.image} alt='img_api_error'className="img_card" />
@@ -50,7 +52,9 @@ export function FilterData () {
             </div>
 
             <div key="cinemaAndMovie">
+            <div className="title_card">
                 <h2>Art et Exposition</h2>
+            </div>
                 {cinemaAndMovie.map((event_cm) => (
                     <div key={event_cm.slug} className="card">
                         <img src={event_cm.image} alt='img_api_error' className="img_card"/>
