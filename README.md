@@ -1,7 +1,7 @@
-# Projet YCulturelles 🏰
+# Projet YCulturel 🏰
 
 ## Introduction
-***Le projet YCulturelles vise à créer une plateforme permettant aux utilisateurs de découvrir et filtrer différents événements culturels.*** 🎆🎉
+***Le projet YCulturel vise à créer une plateforme permettant aux utilisateurs de découvrir et filtrer différents événements culturels.*** 🎆🎉
 
 ### Structure du Projet 🔨
 > Composants
@@ -12,8 +12,11 @@
 - FilterDate.js
   - Permet le filtrage des événements par date.
 
+- YCulturel 
+  - Récupère les données depuis l'API OpenAgenda
+
 - Data
-  - Data.js: Récupère les données depuis l'API OpenAgenda, les stocke et les rend disponibles pour d'autres composants.
+  - Data.js: , Stocke et les rend disponibles pour d'autres composants.
 
 - Styles
   - Card.scss: Fichier de style pour les cartes d'événements.
