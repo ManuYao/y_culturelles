@@ -8,7 +8,7 @@ export default class HomePage extends Component {
     return (
       <div>
           <HeaderPage/>
-        <div className='culture_style '>
+            <div className='culture_style '>
           <FilterData />
           <FilterDate />
         </div>

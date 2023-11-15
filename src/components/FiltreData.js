@@ -4,7 +4,12 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import "../Styles/Card.scss"
+import calendar from '../images/calendar_img.png';
+import explore from '../images/explore_img.png';
+import handshake from '../images/handshake_img.png';
+import title_img from '../images/title_img.png';
+import  "../Styles/Card.scss";
+import { Grid } from "@mui/material";
 
 export function FilterData () {
     const dataEvent = Data();
@@ -36,13 +41,15 @@ export function FilterData () {
         <div className="title_card">
           <h2>Festivals et Musique</h2>
         </div>
-        <Slider {...settings} className="test">
+        <Slider {...settings} >
           {festivalsAndMusic.map((event_fm) => (
             <div key={event_fm.slug} className="card">
               <img src={event_fm.image} alt='img_api_error' className="img_card" />
-              <p>Titre :{event_fm.title_fr}</p>
-              <p>Lieu :{event_fm.location_name}</p>
-              <p>Date :{event_fm.daterange_fr}</p>
+              <Grid className="card_info">
+                <p>Titre :{event_fm.title_fr}</p>
+                <p>Lieu :{event_fm.location_name}</p>
+                <p>Date :{event_fm.daterange_fr}</p>
+              </Grid>
             </div>
           ))}
         </Slider>
@@ -52,13 +59,15 @@ export function FilterData () {
             <div className="title_card">
                 <h2>Théâtre et Spectacle</h2>
             </div>
-            <Slider {...settings} className="test">
+            <Slider {...settings}>
                 {theatreAndShow.map((envent_ts) => (
                     <div key={envent_ts.slug} className="card">
                         <img src={envent_ts.image} alt='img_api_error'className="img_card" />
-                        <p>Titre :{envent_ts.title_fr}</p>
-                        <p>Lieu :{envent_ts.location_name}</p>
-                        <p>Date :{envent_ts.daterange_fr}</p>
+                        <Grid className="card_info">
+                          <p>Titre :{envent_ts.title_fr}</p>
+                          <p>Lieu :{envent_ts.location_name}</p>
+                          <p>Date :{envent_ts.daterange_fr}</p>
+                        </Grid>
                     </div>
                 ))}
                 </Slider>
@@ -68,13 +77,15 @@ export function FilterData () {
             <div className="title_card">
                 <h2>Art et Exposition</h2>
             </div>
-            <Slider {...settings} className="test">
+            <Slider {...settings}>
                 {cinemaAndMovie.map((event_cm) => (
                     <div key={event_cm.slug} className="card">
                         <img src={event_cm.image} alt='img_api_error' className="img_card"/>
-                        <p>Titre :{event_cm.title_fr}</p>
-                        <p>Lieu :{event_cm.location_name}</p>
-                        <p>Date :{event_cm.daterange_fr}</p>
+                        <Grid className="card_info">
+                          <p>Titre :{event_cm.title_fr}</p>
+                          <p>Lieu :{event_cm.location_name}</p>
+                          <p>Date :{event_cm.daterange_fr}</p>
+                        </Grid>
                     </div>
                 ))}
             </Slider>
@@ -115,23 +126,27 @@ export function FilterDate() {
    // console.log('Événements filtrés :', filteredEvents);
   
     return (
-      <div>
-        <label>
-          <input
+      <div> 
+        <div className="title_card1">
+        <label className="input_style">
+          <input 
             type="checkbox"
             checked={filterByDate}
             onChange={handleCheckboxChange}
-          />
+          /> 
           Filtrer par date
         </label>
+        </div>
 
-      <Slider {...settings} className="test">
+      <Slider {...settings}>
         {filteredEvents.map((event) => (
           <div key={event.slug} className="card">
             <img src={event.image} alt='img_api_error' className="img_card"/>
-            <p>Titre : {event.title_fr}</p>
-            <p>Lieu : {event.location_name}</p>
-            <p>Date : {event.daterange_fr}</p>
+            <Grid className="card_info">
+              <p>Titre : {event.title_fr}</p>
+              <p>Lieu : {event.location_name}</p>
+              <p>Date : {event.daterange_fr}</p>
+            </Grid>
           </div>
         ))}
       </Slider>
