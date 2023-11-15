@@ -41,7 +41,6 @@ export function FilterData () {
             <div key={event_fm.slug} className="card">
               <img src={event_fm.image} alt='img_api_error' className="img_card" />
               <p>Titre :{event_fm.title_fr}</p>
-              <p>Condition :{event_fm.conditions_fr}</p>
               <p>Lieu :{event_fm.location_name}</p>
               <p>Date :{event_fm.daterange_fr}</p>
             </div>
@@ -58,7 +57,6 @@ export function FilterData () {
                     <div key={envent_ts.slug} className="card">
                         <img src={envent_ts.image} alt='img_api_error'className="img_card" />
                         <p>Titre :{envent_ts.title_fr}</p>
-                        <p>Condition :{envent_ts.conditions_fr}</p>
                         <p>Lieu :{envent_ts.location_name}</p>
                         <p>Date :{envent_ts.daterange_fr}</p>
                     </div>
@@ -75,7 +73,6 @@ export function FilterData () {
                     <div key={event_cm.slug} className="card">
                         <img src={event_cm.image} alt='img_api_error' className="img_card"/>
                         <p>Titre :{event_cm.title_fr}</p>
-                        <p>Condition :{event_cm.conditions_fr}</p>
                         <p>Lieu :{event_cm.location_name}</p>
                         <p>Date :{event_cm.daterange_fr}</p>
                     </div>
@@ -133,7 +130,6 @@ export function FilterDate() {
           <div key={event.slug} className="card">
             <img src={event.image} alt='img_api_error' className="img_card"/>
             <p>Titre : {event.title_fr}</p>
-            <p>Condition : {event.conditions_fr}</p>
             <p>Lieu : {event.location_name}</p>
             <p>Date : {event.daterange_fr}</p>
           </div>

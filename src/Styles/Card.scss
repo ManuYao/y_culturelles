@@ -1,6 +1,5 @@
 //test
 .test{
-    
     margin: auto;
 }
 
@@ -9,8 +8,9 @@
     h2{
         display: flex;
         align-items: center;
-        background-color: #F5F5F5;
         margin: auto;
+        background-color: #F5F5F5;
+        color: #685D79;
         margin-bottom: 24px;
         padding-left: 24px;
         height: 64px;
@@ -22,13 +22,22 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    margin-left: 24px;
     .img_card{
         width: 72vw;
         height: 98vw;
         margin-left: 24px;
+        border-radius: 18px;
+        object-fit: cover;
     }
     p{
-
+        color: #F5F5F5;
+        font-size: 80%;
+        font-weight: 300;
     }
 }
 
+//HomePage
+.culture_style{
+    background: linear-gradient(180deg, #E17A47 45.31%, #2F292C 75.1%);
+}
