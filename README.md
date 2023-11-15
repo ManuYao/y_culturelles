@@ -15,8 +15,9 @@
 - YCulturel 
   - Récupère les données depuis l'API OpenAgenda
 
-- Data
-  - Data.js: , Stocke et les rend disponibles pour d'autres composants.
+- FilterData
+  - Data.js: ,
+ Stocke et les rend disponibles pour d'autres composants.
 
 - Styles
   - Card.scss: Fichier de style pour les cartes d'événements.
