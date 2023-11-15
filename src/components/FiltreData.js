@@ -1,5 +1,9 @@
 import React, {useState} from "react";
 import Data from "./Data";
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 import "../Styles/Card.scss"
 
 export function FilterData () {
@@ -19,27 +23,37 @@ export function FilterData () {
         event_theatre_show.keywords_fr.includes('théâtre') || event_theatre_show.keywords_fr.includes('spectacle')
     ) : [];
 
+    const settings = { //Style Slider
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1.1, 
+      slidesToScroll: 1
+    };
+
     return (
         <div>
-            <div key="festivalsAndMusic" >
-              <div className="title_card">
-                <h2>Festivals et Musique</h2>
-              </div>
-                {festivalsAndMusic.map((event_fm) => (
-                    <div key={event_fm.slug} className="card">
-                        <img src={event_fm.image} alt='img_api_error' className="img_card"/>
-                        <p>Titre :{event_fm.title_fr}</p>
-                        <p>Condition :{event_fm.conditions_fr}</p>
-                        <p>Lieu :{event_fm.location_name}</p>
-                        <p>Date :{event_fm.daterange_fr}</p>
-                    </div>
-                ))}
+            <div key="festivalsAndMusic">
+        <div className="title_card">
+          <h2>Festivals et Musique</h2>
+        </div>
+        <Slider {...settings} className="test">
+          {festivalsAndMusic.map((event_fm) => (
+            <div key={event_fm.slug} className="card">
+              <img src={event_fm.image} alt='img_api_error' className="img_card" />
+              <p>Titre :{event_fm.title_fr}</p>
+              <p>Condition :{event_fm.conditions_fr}</p>
+              <p>Lieu :{event_fm.location_name}</p>
+              <p>Date :{event_fm.daterange_fr}</p>
+            </div>
+          ))}
+        </Slider>
             </div>
 
             <div key="theatreAndShow">
             <div className="title_card">
                 <h2>Théâtre et Spectacle</h2>
             </div>
+            <Slider {...settings} className="test">
                 {theatreAndShow.map((envent_ts) => (
                     <div key={envent_ts.slug} className="card">
                         <img src={envent_ts.image} alt='img_api_error'className="img_card" />
@@ -49,12 +63,14 @@ export function FilterData () {
                         <p>Date :{envent_ts.daterange_fr}</p>
                     </div>
                 ))}
+                </Slider>
             </div>
 
             <div key="cinemaAndMovie">
             <div className="title_card">
                 <h2>Art et Exposition</h2>
             </div>
+            <Slider {...settings} className="test">
                 {cinemaAndMovie.map((event_cm) => (
                     <div key={event_cm.slug} className="card">
                         <img src={event_cm.image} alt='img_api_error' className="img_card"/>
@@ -64,6 +80,7 @@ export function FilterData () {
                         <p>Date :{event_cm.daterange_fr}</p>
                     </div>
                 ))}
+            </Slider>
             </div>
 
         </div>
@@ -77,6 +94,13 @@ export function FilterData () {
 export function FilterDate() {
     const dataEvent = Data();
     const [filterByDate, setFilterByDate] = useState(false);
+
+    const settings = { //Style Slider
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1.1, 
+      slidesToScroll: 1
+    };
   
     //Clic Event
     const handleCheckboxChange = () => {
@@ -103,7 +127,8 @@ export function FilterDate() {
           />
           Filtrer par date
         </label>
-  
+
+      <Slider {...settings} className="test">
         {filteredEvents.map((event) => (
           <div key={event.slug} className="card">
             <img src={event.image} alt='img_api_error' className="img_card"/>
@@ -113,6 +138,7 @@ export function FilterDate() {
             <p>Date : {event.daterange_fr}</p>
           </div>
         ))}
+      </Slider>
       </div>
     );
   }  
