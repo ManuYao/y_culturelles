@@ -41,7 +41,7 @@
         align-items: center;
         justify-content: end;
         color: #685D79;
-        padding-left: 16%;
+        padding-left: 16px;
     }
     
 }
@@ -60,7 +60,6 @@
         border-radius: 18px;
     }
     .card_info{
-
         width: 70%;
         display: flex;
         display: grid;
@@ -70,7 +69,6 @@
         margin-top: 40px;
         gap: 10px;
         p{
-            
             color: #F5F5F5;
             font-size: 80%;
            // font-weight: 300;
@@ -78,6 +76,11 @@
            // margin-left: 16px;
         }
         img{color: #F5F5F5;}
+        .pxxx{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
     }
 
 } 
@@ -86,3 +89,26 @@
 .culture_style{
     background: linear-gradient(180deg, #2F292C 45.31%, rgb(30, 31, 32) 75.1%);
 }
+
+//Version tablet
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    .card{
+        margin-left: 66px;
+        .img_card{
+            width: 43vw;
+            height: 57vw;
+            
+        }
+
+    }
+}
+
+//Version PC
+@media screen and (min-width: 1024px) {
+    .card{
+        .img_card{
+            width: 16vw;
+            height: 24vw;
+        }
+    }
+  }
