@@ -46,3 +46,5 @@ Lancez l'application avec ```npm start```.
 ``npm install @fontsource/roboto``
 ``npm install @mui/icons-material``
 
+>  Install SCSS
+``npm install sass``
