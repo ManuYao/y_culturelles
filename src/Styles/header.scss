@@ -1,16 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Manrope:wght@800&display=swap');
-
-h1{
-  font-family: 'Josefin Sans', sans-serif;
-}
-p,h2{ font-family: 'Manrope', sans-serif; }
-
 .headerpage{
-    margin-bottom: 24px;
+  background-image: url(../images/header_img.webp);
+  background-size: 100%;
+  background-position: center ;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 60px;
+  margin-top: -40px;
     
     .field_style{
-        //border-radius: 54px;
+      margin: auto;
+      width: 25%;
+    }
+
+    h1{
+      color: aliceblue;
+      font-size: 60px;
     }
 }
 

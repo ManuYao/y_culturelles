@@ -7,12 +7,12 @@ export default function HeaderPage() {
   return (
     <div className='headerpage'>
         <Grid >
-          <Grid container sx={{flexDirection:'row', alignItems:'center', justifyContent:'space-around', mt:5, mb:3}}>
+          <Grid container sx={{flexDirection:'row', alignItems:'center', justifyContent:'space-around', mt:5, mb:3, p:2}}>
             <h1 className='text-shadow-pop-br'>YEvent</h1>
             <img src={perso} alt='Connection' />
           </Grid>
-          <Grid sx={{ml:9}}>      
-            <TextField className='field_style' label="Recherche" variant="filled"/>
+          <Grid sx={{ml:12}} className='field_style'>      
+            <TextField label="Recherche" variant="filled" color="success" focused />
           </Grid>
         </Grid>
     </div>

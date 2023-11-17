@@ -12,7 +12,6 @@ import "../Styles/Card.scss";
 export function FilterData() {
   const dataEvent = Data();
 
-  //Style carrousel
   const settings = {
     mobile: {
       infinite: true,
@@ -23,17 +22,16 @@ export function FilterData() {
     tablet: {
       infinite: true,
       speed: 500,
-      slidesToShow: 2.2,
+      slidesToShow: 2,
       slidesToScroll: 2,
     },
     desktop: {
       speed: 500,
-      slidesToShow: 4,
+      slidesToShow: 3,
       slidesToScroll: 3,
     },
   };
 
-  //Condition format carrousel 
   const getSettings = () => {
     const width = window.innerWidth;
 
@@ -48,7 +46,7 @@ export function FilterData() {
 
   const [carouselSettings, setCarouselSettings] = useState(getSettings);
 
-  //Mise à jour lorsque la taille de l'écran change
+  // Met à jour les paramètres lorsque la taille de l'écran change
   useEffect(() => {
     const handleResize = () => {
       setCarouselSettings(getSettings());
@@ -56,11 +54,11 @@ export function FilterData() {
 
     window.addEventListener("resize", handleResize);
 
-    // supression de l'événement
+    // Nettoyage de l'écouteur d'événement lors du démontage du composant
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, []); // Déclenché une seule fois lors du montage du composant
 
   const festivalsAndMusic = Array.isArray(dataEvent)
     ? dataEvent.filter((event) =>
@@ -68,7 +66,6 @@ export function FilterData() {
       )
     : [];
 
-    //Filtre data (art - expo - théâtre - spectacle)
   const cinemaAndMovie = Array.isArray(dataEvent)
     ? dataEvent.filter((event) =>
         event.keywords_fr.includes('art') || event.keywords_fr.includes('exposition')
@@ -140,7 +137,6 @@ export function FilterData() {
   );
 }
 
-//Filtre par date 
 export function FilterDate() {
   const dataEvent = Data();
   const [filterByDate, setFilterByDate] = useState(false);
