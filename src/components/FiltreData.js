@@ -16,7 +16,7 @@ export function FilterData() {
     mobile: {
       infinite: true,
       speed: 500,
-      slidesToShow: 1.1,
+      slidesToShow: 1.1, //nombre d'élément affiché !
       slidesToScroll: 1,
     },
     tablet: {
@@ -31,7 +31,8 @@ export function FilterData() {
       slidesToScroll: 3,
     },
   };
-
+  
+  // Condition taille de l'écran 
   const getSettings = () => {
     const width = window.innerWidth;
 
@@ -60,6 +61,7 @@ export function FilterData() {
     };
   }, []); // Déclenché une seule fois lors du montage du composant
 
+  //Filtre (festival, art, spectacle ...)
   const festivalsAndMusic = Array.isArray(dataEvent)
     ? dataEvent.filter((event) =>
         event.keywords_fr.includes('festival') || event.keywords_fr.includes('musique')

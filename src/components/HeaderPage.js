@@ -5,7 +5,7 @@ import '../Styles/Header.scss'
 
 export default function HeaderPage() {
   return (
-    <div className='headerpage'>
+    <header className='headerpage'>
         <Grid >
           <Grid container sx={{flexDirection:'row', alignItems:'center', justifyContent:'space-around', mt:5, mb:3, p:2}}>
             <h1 className='text-shadow-pop-br'>YEvent</h1>
@@ -15,6 +15,6 @@ export default function HeaderPage() {
             <TextField label="Recherche" variant="filled" color="success" focused />
           </Grid>
         </Grid>
-    </div>
+    </header>
   )
 }
