@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Montserrat+Alternates&display=swap');
+//test
+.test{
+    
+}
+*,*::before,*::after{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat Alternates', sans-serif;
+}   
+//Card
+.title_card{
+    -webkit-box-shadow:0px 0px 148px 1px rgba(152,44,114,0.9);
+    -moz-box-shadow: 0px 0px 148px 1px rgba(152,44,114,0.9);
+    box-shadow: 0px 0px 148px 1px rgba(152,44,114,0.9);
+    h2{
+        display: flex;
+        align-items: center;
+        margin: auto;
+        background-color: #F5F5F5;
+        color: #685D79;
+        margin-bottom: 24px;
+        padding-left: 24px;
+        height: 64px;
+        font-size: 16px;
+    }
+}
+//input
+.title_card1{
+    -webkit-box-shadow:0px 0px 148px 1px rgba(152,44,114,0.9);
+    -moz-box-shadow: 0px 0px 148px 1px rgba(152,44,114,0.9);
+    box-shadow: 0px 0px 148px 1px rgba(152,44,114,0.9);
+    background-color: #F5F5F5;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 64px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    .input_style{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        color: #685D79;
+        padding-left: 16px;
+    }
+    
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-left: 24px;
+    .img_card{
+        object-fit: cover;
+        box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+        width: 72vw;
+        height: 98vw;
+        margin-left: 24px;
+        border-radius: 18px;
+    }
+    .card_info{
+        width: 70%;
+        display: flex;
+        display: grid;
+        /* flex-wrap: wrap; */
+        justify-items: start;
+        margin-left: 5%;
+        margin-top: 40px;
+        gap: 10px;
+        p{
+            color: #F5F5F5;
+            font-size: 80%;
+           // font-weight: 300;
+           // margin-top: 24px;
+           // margin-left: 16px;
+        }
+        img{color: #F5F5F5;}
+        .pxxx{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+
+} 
+
+//HomePage
+.culture_style{
+    background: linear-gradient(180deg, #2F292C 45.31%, rgb(30, 31, 32) 75.1%);
+}
+
+//Version tablet
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    .card{
+        margin-left: 66px;
+        .img_card{
+            width: 43vw;
+            height: 57vw;
+            
+        }
+
+    }
+}
+
+//Version PC
+@media screen and (min-width: 1024px) {
+    .card{
+        .img_card{
+            width: 16vw;
+            height: 24vw;
+        }
+    }
+  }
